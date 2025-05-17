@@ -65,11 +65,13 @@ function Movies() {
                     Siguiente
                 </button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {movies.map((movie) => (
-                    <MovieCard key={movie.imdb_title_id} movie={movie} />
+                    <li key={movie.imdb_title_id} className="list-none">
+                        <MovieCard movie={movie} />
+                    </li>
                 ))}
-            </div>
+            </ul>
         </div>
     );
 }
